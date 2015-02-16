@@ -13,6 +13,10 @@ padding: 0px
 span.nobr { white-space: nowrap; }
 </style>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<!-- js/medieval.js - współrzędne dla systemu Średniowiecze -->
+<script src="js/medieval.js"  charset="UTF-8"></script>
+<!-- js/wb-95.js - współrzędne dla systemu WB-95 -->
+<script src="js/wb-95.js"  charset="UTF-8"></script>
 <script>
 // This example creates a simple polygon representing the Bermuda Triangle.
 // When the user clicks on the polygon an info window opens, showing
@@ -31,138 +35,12 @@ mapTypeId: google.maps.MapTypeId.TERRAIN
  
 map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-var cityCircle; 
-var smallMaps = {};
-var smallMaps2 = {};
-//---------------------------------------------------------------------------------------------------------------
-// Współrzędne dla małych map
-// Gry w systemie Średniowiecze wydane w pudełkach.
-smallMaps['puszczyka'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(52.158097, 21.022692),
-  func: function puszczyka(event) {	infoWindow.setContent(
-		'<b>TiS HQ</b><br><span class="nobr">Centrum dowodzenia wszechświatem.</span><br><a href="http://taktykaistrategia.pl/" target="_blank">Strona TiS</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['grunwald1410'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(53.531810, 20.103500),
-  func: function grunwald1410(event) {	infoWindow.setContent(
-		'<b>Grunwald 1410</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2057" target="_blank">Forum Grunwald 1410</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['legnica1410'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(51.2046913,16.1603306),
-  func: function legnica1410(event) {	infoWindow.setContent(
-		'<b>Legnica 1241</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2330" target="_blank">Forum Legnica 1241</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['kosowePole1389'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(42.6377242,21.0909109),
-  func: function kosowePole1389(event) {	infoWindow.setContent(
-		'<b>Kosowe Pole 1389</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2326" target="_blank">Forum Kosowe Pole 1389</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Bannocburn1314'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(56.090991, -3.907598),
-  func: function Bannocburn1314(event) {	infoWindow.setContent(
-		'<b>Bannocburn 1314</b><br><b>Falkirk 1298</b><br><b>Stirling 1297</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2035" target="_blank">Forum Bannocburn 1314</a><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3916" target="_blank">Forum Falkirk 1298</a><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1327" target="_blank">Forum Stirling 1297</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Falkirk1298'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(56.0048829,-3.7990217),
-  func: function Bannocburn1314(event) {	infoWindow.setContent(
-		'<b>Bannocburn 1314</b><br><b>Falkirk 1298</b><br><b>Stirling 1297</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2035" target="_blank">Forum Bannocburn 1314</a><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3916" target="_blank">Forum Falkirk 1298</a><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1327" target="_blank">Forum Stirling 1297</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Stirling1297'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(56.1187053,-3.9396984),
-  func: function Bannocburn1314(event) {	infoWindow.setContent(
-		'<b>Bannocburn 1314</b><br><b>Falkirk 1298</b><br><b>Stirling 1297</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2035" target="_blank">Forum Bannocburn 1314</a><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3916" target="_blank">Forum Falkirk 1298</a><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1327" target="_blank">Forum Stirling 1297</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Warna1444'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(43.2048411,27.9429086),
-  func: function Warna1444(event) {	infoWindow.setContent(
-		'<b>Warna 1444</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=4047" target="_blank">Forum Warna 1444</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['KulikowePole1380'] = {
-  radius: 12345,
-  center: new google.maps.LatLng(53.9030861,37.4246475),
-  func: function KulikowePole1380(event) {	infoWindow.setContent(
-		'<b>Kulikowe Pole 1380</b><br><span class="nobr">Wydanie pudełkowe</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2326" target="_blank">Forum Kulikowe Pole 1380</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-//---------------------------------------------------------------------------------------------------------------
-// Gry w systemie Średniowiecze z TiSów.
-smallMaps['Crecy1346'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(50.2408148,1.8397035),
-  func: function Crecy1346(event) {	infoWindow.setContent(
-		'<b>Crecy 1346</b><br><span class="nobr">TiS 40</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=4172&postdays=0&postorder=asc&start=0" target="_blank">Forum TiS 40</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Chmielnik1241'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(50.6114984,20.7486056),
-  func: function Chmielnik1241(event) {	infoWindow.setContent(
-		'<b>Chmielnik 1241</b><br><span class="nobr">TiS 35</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3517" target="_blank">Forum Chmielnik 1241</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Pejpus'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(58.6170778,27.4137803),
-  func: function Pejpus(event) {	infoWindow.setContent(
-		'<b>Jezioro Pejpus 1242</b><br><span class="nobr">TiS 34</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3372" target="_blank">Forum Jezioro Pejpus 1242</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Plowce1331'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(52.6177391,18.6389065),
-  func: function Plowce1331(event) {	infoWindow.setContent(
-		'<b>Płowce 1331</b><br><span class="nobr">TiS 27</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2823" target="_blank">Forum Płowce 1331</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Chojnice1454'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(53.7000948,17.5577066),
-  func: function Chojnice1454(event) {	infoWindow.setContent(
-		'<b>Chojnice 1454</b><br><span class="nobr">TiS 25</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2646" target="_blank">Forum Chojnice 1454</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Kurzetnik1410'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(53.3986718,19.5719868),
-  func: function Kurzetnik1410(event) {	infoWindow.setContent(
-		'<b>Kurzętnik 1410</b><br><span class="nobr">TiS 24</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2683" target="_blank">Forum Kurzętnik 1410</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['Koronowo1410'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(53.3154901,17.9498951),
-  func: function Koronowo1410(event) {	infoWindow.setContent(
-		'<b>Koronowo 1410</b><br><span class="nobr">TiS 22</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2417" target="_blank">Forum Koronowo 1410</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
-smallMaps['swiecino1462'] = {
-  radius: 8765,
-  center: new google.maps.LatLng(54.7360696,18.1730181),
-  func: function swiecino1462(event) {	infoWindow.setContent(
-		'<b>Świecino 1462</b><br><span class="nobr">TiS 16</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1458" target="_blank">Forum Świecino 1462</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
-};
 
 //---------------------------------------------------------------------------------------------------------------
 // Define the LatLng coordinates for the polygon.
-var smolensk1941Coords = [
-new google.maps.LatLng(55.496898, 30.047672),
-new google.maps.LatLng(53.216881, 30.047672),
-new google.maps.LatLng(53.216881, 33.555900),
-new google.maps.LatLng(55.496898, 33.555900)
-];
 
-var moskwa1941Coords = [
-new google.maps.LatLng(56.962024, 35.607712),
-new google.maps.LatLng(55.238550, 36.154329),
-new google.maps.LatLng(55.439272, 38.451844),
-new google.maps.LatLng(57.184025, 37.886049)
-];
-var tula1941Coords = [
-new google.maps.LatLng(55.238550, 36.154329),
-new google.maps.LatLng(53.340540, 36.734799),
-new google.maps.LatLng(53.613975, 39.032565),
-new google.maps.LatLng(55.439272, 38.451844)
-];
+
+
 var bagration1944Coords= [
 new google.maps.LatLng(52.348133, 20.511809),
 new google.maps.LatLng(51.243119, 21.792283),
@@ -204,12 +82,6 @@ new google.maps.LatLng(51.800000, 12.539517),
 new google.maps.LatLng(51.800000, 15.000000),
 new google.maps.LatLng(52.859480, 15.000000)
 ];
-var budapeszt1945Coords = [
-new google.maps.LatLng(48.263425, 17.156747),
-new google.maps.LatLng(46.022157, 17.156747),
-new google.maps.LatLng(46.022157, 19.479651),
-new google.maps.LatLng(48.263425, 19.479651)
-];
 
 var nordwind1945Coords = [
 new google.maps.LatLng(49.257848, 6.624716),
@@ -232,25 +104,8 @@ new google.maps.LatLng(50.465365, 18.020212),
 new google.maps.LatLng(51.279807, 18.020212)
 ];
 //---------------------------------------------------------------------------------------------------------------
-// Construct the polygon. moskwa 1941
-moskwa1941 = new google.maps.Polygon({
-paths: moskwa1941Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-moskwa1941.setMap(map);
- 
-//tula 1941
-tula1941 = new google.maps.Polygon({
-paths: tula1941Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-tula1941.setMap(map);
- 
- //tula 1941
-smolensk1941 = new google.maps.Polygon({
-paths: smolensk1941Coords, strokeColor: '#880000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#880000', fillOpacity: 0.35,  map: map
-});
 
- 
- 
+
 //bagration 1944
 bagration1944 = new google.maps.Polygon({
 paths: bagration1944Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
@@ -285,12 +140,6 @@ budziszyn1945.setMap(map);
 berlin1945= new google.maps.Polygon({
 paths: berlin1945Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
 });
-berlin1945.setMap(map);
-//Budapeszt 1945
-budapeszt1945= new google.maps.Polygon({
-paths: budapeszt1945Coords, strokeColor: '#880000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#880000', fillOpacity: 0.35
-});
-budapeszt1945.setMap(map);
 
 //Colmar 1945
 colmar1945= new google.maps.Polygon({
@@ -311,16 +160,16 @@ wroclaw1945.setMap(map);
 
 //---------------------------------------------------------------------------------------------------------------
 // Add a listener for the click event.
-google.maps.event.addListener(moskwa1941, 'click', showMoskwa1941);
-google.maps.event.addListener(tula1941, 'click', showTula1941);
-google.maps.event.addListener(smolensk1941, 'click', showSmolensk1941);
+
+
+
 google.maps.event.addListener(bagration1944, 'click', showBagration1944);
 google.maps.event.addListener(normandia1944, 'click', showNormandia1944);
 google.maps.event.addListener(ardeny1944, 'click', showArdeny1944);
 google.maps.event.addListener(holandia1944, 'click', showHolandia1944);
 google.maps.event.addListener(budziszyn1945, 'click', showBudziszyn1945);
 google.maps.event.addListener(berlin1945, 'click', showBerlin1945);
-google.maps.event.addListener(budapeszt1945, 'click', showBudapeszt1945);
+
 google.maps.event.addListener(colmar1945, 'click', showColmar1945);
 google.maps.event.addListener(nordwind1945, 'click', showNordwind1945);
 google.maps.event.addListener(wroclaw1945, 'click', showWroclaw1945);
@@ -378,30 +227,8 @@ infoWindow.setPosition(event.latLng);
 infoWindow.open(map);
 }
 
- function showSmolensk1941(event) {
-var contentString = '<b>Smoleńsk 1941</b><br>' +
-'<span class="nobr">Wydanie pudełkowe. Mirrage Hobby.</span><br>' +
-'<!--a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2572" target="_blank">Forum Moskwa 1941</a-->';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-function showMoskwa1941(event) {
-var contentString = '<b>Moskwa 1941</b><br>' +
-'Wydanie pudełkowe<br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2572" target="_blank">Forum Moskwa 1941</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-function showTula1941(event) {
-var contentString = '<b>Tula 1941</b><br>' +
-'TiS 33, TiS 34<br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2572" target="_blank">Forum Moskwa 1941</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
+
+
 function showBagration1944(event) {
 var contentString = '<b>Bagration 1944</b><br>' +
 'TiS 25, TiS 26<br>' +
@@ -427,34 +254,39 @@ infoWindow.setPosition(event.latLng);
 infoWindow.open(map);
 }
 
-function showBudapeszt1945(event) {
-var contentString = '<b>Budapeszt 1945</b><br>' +
-'<span class="nobr">Wydanie pudełkowe. Mirrage Hobby</span><br>' +
-'<a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=195" target="_blank">Forum Budapeszt 1945</a>';
 
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-
-for (var game in smallMaps) {
-    var smalMapView = {
-      strokeColor: '#0000FF',  strokeOpacity: 0.8,  strokeWeight: 2,  fillColor: '#0000FF', fillOpacity: 0.35,  map: map,  center: smallMaps[game].center, radius: smallMaps[game].radius
+for (var game in medievalMaps) {
+    var medievalMapView = {
+      strokeColor: '#0000FF',  strokeOpacity: 0.8,  strokeWeight: 2,  fillColor: '#0000FF', fillOpacity: 0.35,  map: map,  center: medievalMaps[game].center, radius: medievalMaps[game].radius
 	  };
-    mapsCircle = new google.maps.Circle(smalMapView);
-	google.maps.event.addListener(mapsCircle, 'click', smallMaps[game].func);
+    mapsCircle = new google.maps.Circle(medievalMapView);
+	google.maps.event.addListener(mapsCircle, 'click', medievalMaps[game].func);
 };
+ /*
+ //tula 1941
+smolensk1941 = new google.maps.Polygon({
+paths: smolensk1941Coords, strokeColor: '#880000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#880000', fillOpacity: 0.35,  map: map
+});
+//google.maps.event.addListener(smolensk1941, 'click', showSmolensk1941);
+ */
 
-
+ for (var game in wb95Maps) {
+    var wb95MapView = {
+		paths: wb95Maps[game].coords, strokeColor: wb95Maps[game].color, strokeOpacity: 0.8, strokeWeight: 3, fillColor: wb95Maps[game].color, fillOpacity: 0.35,  map: map
+	  };
+    var mapsPolygon = new google.maps.Polygon(wb95MapView);
+	google.maps.event.addListener(mapsPolygon, 'click', wb95Maps[game].func);
+};
+ 
 /* Wersja z ikonką zamiast koła
-for (var game in smallMaps2) {
+for (var game in medievalMaps2) {
     var smalMapMarker = {
-      position: smallMaps2[game].center,
+      position: medievalMaps2[game].center,
       map: map,
-      icon: smallMaps2[game].icon, 
+      icon: medievalMaps2[game].icon, 
 	  };
     mapsMarker = new google.maps.Marker(smalMapMarker);
-	google.maps.event.addListener(mapsMarker, 'click', smallMaps2[game].func);
+	google.maps.event.addListener(mapsMarker, 'click', medievalMaps2[game].func);
 };
 */
 
