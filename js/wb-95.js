@@ -72,6 +72,20 @@ wb95Maps['stalingrad1943'] = {
 				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
 };
 
+wb95Maps['kursk1943'] = {
+    coords : [
+		new google.maps.LatLng(52.526566, 35.608166), 
+		new google.maps.LatLng(50.355780, 35.608166),
+		new google.maps.LatLng(50.355780, 37.169982),
+		new google.maps.LatLng(52.526566, 37.169982)
+	],
+	color: '#FF0000',
+	func:  function kursk1943(event) {
+				var contentString = '<b>Kursk 1943</b><br><span class="nobr">Wydanie pudełkowe.</span><br>' +
+				'<a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3305" target="_blank">Forum Kursk 1943</a>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
 wb95Maps['normandia1944'] = {
     coords : [
 			new google.maps.LatLng(49.723117, -1.940624),
@@ -91,8 +105,8 @@ wb95Maps['normandia1944'] = {
 wb95Maps['korsun1944'] = {
     coords : [
 			new google.maps.LatLng(50.026006, 30.598960),
-			new google.maps.LatLng(49.147019, 29.854887),
-			new google.maps.LatLng(48.566554, 31.812806),
+			new google.maps.LatLng(49.157019, 29.854887),
+			new google.maps.LatLng(48.560554, 31.812806),
 			new google.maps.LatLng(49.437317, 32.537596)
 	],
 	color: '#FF0000',
@@ -173,6 +187,48 @@ wb95Maps['lukdonu1943'] = {
 				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
 };
 
+wb95Maps['kursk2armia'] = {
+    coords : [
+		new google.maps.LatLng(52.526566, 34.547596), 
+		new google.maps.LatLng(50.355780, 34.547596),
+		new google.maps.LatLng(50.355780, 35.608166),
+		new google.maps.LatLng(52.526566, 35.608166)
+	],
+	color: '#FF0000',
+	func:  function kursk2armia(event) {
+				var contentString = '<b>Kursk 1943. 2 Armia</b><br><span class="nobr">TiS 36</span><br>' +
+				'<a href="http://www.taktykaistrategia.pl/forum/viewtopic.php?t=3513" target="_blank">Forum TiS 36</a>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['kutzowwsch'] = {
+    coords : [
+		new google.maps.LatLng(53.584483, 35.908134), 
+		new google.maps.LatLng(52.634862, 35.908134),
+		new google.maps.LatLng(52.634862, 37.116630),
+		new google.maps.LatLng(53.584483, 37.116630)
+	],
+	color: '#FF0000',
+	func:  function kutzowwsch(event) {
+				var contentString = '<b>Kutuzow Wschód</b><br><span class="nobr">TiS 38</span><br>' +
+				'<a href="http://www.taktykaistrategia.pl/forum/viewtopic.php?t=3647" target="_blank">Forum TiS 38</a><br>' +
+				'<a href="http://www.taktykaistrategia.pl/forum/viewtopic.php?t=4124" target="_blank">Forum TiS 39</a>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+wb95Maps['kutzowzach'] = {
+    coords : [
+		new google.maps.LatLng(53.901023, 34.699638), 
+		new google.maps.LatLng(52.951402, 34.699638),
+		new google.maps.LatLng(52.951402, 35.908134),
+		new google.maps.LatLng(53.901023, 35.908134)
+	],
+	color: '#FF0000',
+	func:  function kutzowzach(event) {
+				var contentString = '<b>Kutuzow Zachód</b><br><span class="nobr">TiS 39</span><br>' +
+				'<a href="http://www.taktykaistrategia.pl/forum/viewtopic.php?t=3647" target="_blank">Forum TiS 38</a><br>' +
+				'<a href="http://www.taktykaistrategia.pl/forum/viewtopic.php?t=4124" target="_blank">Forum TiS 39</a>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
 wb95Maps['bagration1944'] = {
     coords : [
 		new google.maps.LatLng(52.348133, 20.511809),
