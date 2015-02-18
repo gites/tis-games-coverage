@@ -27,7 +27,18 @@ wb95Maps['budapeszt1945'] = {
 				'<a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=195" target="_blank">Forum Budapeszt 1945</a>';
 				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
 };
-
+wb95Maps['jugoslawia1945'] = {
+    coords : [
+		new google.maps.LatLng(46.022157, 17.156747),
+		new google.maps.LatLng(44.901523, 17.156747),
+		new google.maps.LatLng(44.901523, 19.479651),
+		new google.maps.LatLng(46.022157, 19.479651)
+	],
+	color: '#880000',
+	func:  function jugoslawia1945(event) {
+				var contentString = '<b>Jugosławia 1945</b><br><span class="nobr">Dragon Hobby x/yy. Mirrage Hobby.</span><br> Mapa widmo :)'
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
 //--------------------------------------------------------------------------------
 // Gry w systemie WB-95 wydane w pudełkach.
 wb95Maps['moskwa1941'] = {
