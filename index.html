@@ -36,224 +36,15 @@ mapTypeId: google.maps.MapTypeId.TERRAIN
 map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 
-//---------------------------------------------------------------------------------------------------------------
-// Define the LatLng coordinates for the polygon.
-
-
-
-var bagration1944Coords= [
-new google.maps.LatLng(52.348133, 20.511809),
-new google.maps.LatLng(51.243119, 21.792283),
-new google.maps.LatLng(51.786645, 22.981553),
-new google.maps.LatLng(52.863436, 21.741472)
-];
-var normandia1944Coords= [
-new google.maps.LatLng(49.723117, -1.940624),
-new google.maps.LatLng(48.522891, -1.940624),
-new google.maps.LatLng(48.522891, 0.249783),
-new google.maps.LatLng(49.429814, 0.249783),
-new google.maps.LatLng(49.429814, -1.219730),
-new google.maps.LatLng(49.723117, -1.219730)
-];
-
-var ardeny1944Coords= [
-new google.maps.LatLng(50.6800099, 4.3561299),
-new google.maps.LatLng(49.79, 4.3561299),
-new google.maps.LatLng(49.79, 6.499383),
-new google.maps.LatLng(50.6800099, 6.499383)
-];
-var holandia1944Coords= [
-new google.maps.LatLng(51.573092, 4.3561299),
-new google.maps.LatLng(50.6800099, 4.3561299),
-new google.maps.LatLng(50.6800099, 6.499383),
-new google.maps.LatLng(51.573092, 6.499383)
-];
-
-var budziszyn1945Coords = [
-new google.maps.LatLng(51.800000, 12.539517),
-new google.maps.LatLng(50.969538, 12.539517),
-new google.maps.LatLng(50.969538, 15.000000),
-new google.maps.LatLng(51.800000, 15.000000)
-];
- 
-var berlin1945Coords = [
-new google.maps.LatLng(52.856505, 12.539517),
-new google.maps.LatLng(51.800000, 12.539517),
-new google.maps.LatLng(51.800000, 15.000000),
-new google.maps.LatLng(52.859480, 15.000000)
-];
-
-var nordwind1945Coords = [
-new google.maps.LatLng(49.257848, 6.624716),
-new google.maps.LatLng(48.546530, 6.624716),
-new google.maps.LatLng(48.546530, 8.227338),
-new google.maps.LatLng(49.257848, 8.227338)
-];
-
-var colmar1945Coords = [
-new google.maps.LatLng(48.546530, 6.624716),
-new google.maps.LatLng(47.858830, 6.624716),
-new google.maps.LatLng(47.858830, 8.227338),
-new google.maps.LatLng(48.546530, 8.227338)
-];
-
-var wroclaw1945Coords = [
-new google.maps.LatLng(51.279807, 16.100255),
-new google.maps.LatLng(50.465365, 16.100255),
-new google.maps.LatLng(50.465365, 18.020212),
-new google.maps.LatLng(51.279807, 18.020212)
-];
-//---------------------------------------------------------------------------------------------------------------
-
-
-//bagration 1944
-bagration1944 = new google.maps.Polygon({
-paths: bagration1944Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-bagration1944.setMap(map);
-
-//Normandia 1944 
-normandia1944 = new google.maps.Polygon({
-paths: normandia1944Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-normandia1944.setMap(map); 
-
-//Ardeny 1944 
-ardeny1944 = new google.maps.Polygon({
-paths: ardeny1944Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-ardeny1944.setMap(map); 
-//Holandia 1944
-
-holandia1944 = new google.maps.Polygon({
-paths: holandia1944Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-holandia1944.setMap(map);
-
-//Budziszyn 1945
-budziszyn1945= new google.maps.Polygon({
-paths: budziszyn1945Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-budziszyn1945.setMap(map);
- 
-//Berlin 1945
-berlin1945= new google.maps.Polygon({
-paths: berlin1945Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-
-//Colmar 1945
-colmar1945= new google.maps.Polygon({
-paths: colmar1945Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-colmar1945.setMap(map);
-
-//Nordwind 1945
-nordwind1945= new google.maps.Polygon({
-paths: nordwind1945Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-nordwind1945.setMap(map);
-//Wroclaw 1945
-wroclaw1945= new google.maps.Polygon({
-paths: wroclaw1945Coords, strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#FF0000', fillOpacity: 0.35
-});
-wroclaw1945.setMap(map);
-
-//---------------------------------------------------------------------------------------------------------------
-// Add a listener for the click event.
-
-
-
-google.maps.event.addListener(bagration1944, 'click', showBagration1944);
-google.maps.event.addListener(normandia1944, 'click', showNormandia1944);
-google.maps.event.addListener(ardeny1944, 'click', showArdeny1944);
-google.maps.event.addListener(holandia1944, 'click', showHolandia1944);
-google.maps.event.addListener(budziszyn1945, 'click', showBudziszyn1945);
-google.maps.event.addListener(berlin1945, 'click', showBerlin1945);
-
-google.maps.event.addListener(colmar1945, 'click', showColmar1945);
-google.maps.event.addListener(nordwind1945, 'click', showNordwind1945);
-google.maps.event.addListener(wroclaw1945, 'click', showWroclaw1945);
-
-function showNormandia1944(event) {
-var contentString = '<span class="nobr"><b>Normandia 1944</b></span><br>' +
-'<span class="nobr">Wydanie pudełkowe</span><br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=922" target="_blank">Forum Normandia 1944</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-function showArdeny1944(event) {
-var contentString = '<span class="nobr"><b>Ardeny 1944</b></span><br>' +
-'<span class="nobr">Wydanie pudełkowe</span><br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1190" target="_blank">Forum Ardeny 1944</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-
-function showHolandia1944(event) {
-var contentString = '<span class="nobr"><b>Holandia 1944</b></span><br>' +
-'<span class="nobr">TiS 17 + TiS 18</span><br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1659" target="_blank">Forum Holandia 1944</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-
-
-function showWroclaw1945(event) {
-var contentString = '<span class="nobr"><b>Wroclaw 1945</b></span><br>' +
-'<span class="nobr">TiS 23</span><br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2419" target="_blank">Forum Wrocław 1945</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-
-function showNordwind1945(event) {
-var contentString = '<span class="nobr"><b>Nordwind 1945</b></span><br>' +
-'<span class="nobr">TiS 21</span><br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2172" target="_blank">Forum TiS 21</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-function showColmar1945(event) {
-var contentString = '<b>Colmar 1945</b><br>' +
-'<span class="nobr">TiS 28</span><br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2930" target="_blank">Forum TiS 28</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-
-
-
-function showBagration1944(event) {
-var contentString = '<b>Bagration 1944</b><br>' +
-'TiS 25, TiS 26<br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=288" target="_blank">Forum Bagration 1944</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-function showBudziszyn1945(event) {
-var contentString = '<b>Budziszyn 1945</b><br>' +
-'Wydanie pudełkowe<br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1337" target="_blank">Forum Budziszyn 1945</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-function showBerlin1945(event) {
-var contentString = '<b>Berlin 1945</b><br>' +
-'<span class="nobr">Wydanie pudełkowe (kwiecień 2015 ?)<br>' +
-'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3603" target="_blank">Forum Berlin 1945</a></span>';
-infoWindow.setContent(contentString);
-infoWindow.setPosition(event.latLng);
-infoWindow.open(map);
-}
-
+//drawing maps for WB-95
+ for (var game in wb95Maps) {
+    var wb95MapView = {
+		paths: wb95Maps[game].coords, strokeColor: wb95Maps[game].color, strokeOpacity: 0.8, strokeWeight: 3, fillColor: wb95Maps[game].color, fillOpacity: 0.35,  map: map
+	  };
+    var mapsPolygon = new google.maps.Polygon(wb95MapView);
+	google.maps.event.addListener(mapsPolygon, 'click', wb95Maps[game].func);
+};
+//drawing maps for medieval
 
 for (var game in medievalMaps) {
     var medievalMapView = {
@@ -262,21 +53,9 @@ for (var game in medievalMaps) {
     mapsCircle = new google.maps.Circle(medievalMapView);
 	google.maps.event.addListener(mapsCircle, 'click', medievalMaps[game].func);
 };
- /*
- //tula 1941
-smolensk1941 = new google.maps.Polygon({
-paths: smolensk1941Coords, strokeColor: '#880000', strokeOpacity: 0.8, strokeWeight: 3, fillColor: '#880000', fillOpacity: 0.35,  map: map
-});
-//google.maps.event.addListener(smolensk1941, 'click', showSmolensk1941);
- */
 
- for (var game in wb95Maps) {
-    var wb95MapView = {
-		paths: wb95Maps[game].coords, strokeColor: wb95Maps[game].color, strokeOpacity: 0.8, strokeWeight: 3, fillColor: wb95Maps[game].color, fillOpacity: 0.35,  map: map
-	  };
-    var mapsPolygon = new google.maps.Polygon(wb95MapView);
-	google.maps.event.addListener(mapsPolygon, 'click', wb95Maps[game].func);
-};
+//drawing maps for Napoleon
+//TODO :)
  
 /* Wersja z ikonką zamiast koła
 for (var game in medievalMaps2) {

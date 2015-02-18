@@ -27,6 +27,8 @@ wb95Maps['budapeszt1945'] = {
 				'<a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=195" target="_blank">Forum Budapeszt 1945</a>';
 				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
 };
+
+//--------------------------------------------------------------------------------
 // Gry w systemie WB-95 wydane w pudełkach.
 wb95Maps['moskwa1941'] = {
     coords : [
@@ -70,6 +72,79 @@ wb95Maps['stalingrad1943'] = {
 				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
 };
 
+wb95Maps['normandia1944'] = {
+    coords : [
+			new google.maps.LatLng(49.723117, -1.940624),
+			new google.maps.LatLng(48.522891, -1.940624),
+			new google.maps.LatLng(48.522891, 0.249783),
+			new google.maps.LatLng(49.429814, 0.249783),
+			new google.maps.LatLng(49.429814, -1.219730),
+			new google.maps.LatLng(49.723117, -1.219730)
+	],
+	color: '#FF0000',
+	func:  function normandia1944(event) {
+				var contentString = '<span class="nobr"><b>Normandia 1944</b></span><br><span class="nobr">Wydanie pudełkowe</span><br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=922" target="_blank">Forum Normandia 1944</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['korsun1944'] = {
+    coords : [
+			new google.maps.LatLng(50.026006, 30.598960),
+			new google.maps.LatLng(49.147019, 29.854887),
+			new google.maps.LatLng(48.566554, 31.812806),
+			new google.maps.LatLng(49.437317, 32.537596)
+	],
+	color: '#FF0000',
+	func:  function korsun1944(event) {
+				var contentString = '<span class="nobr"><b>Korsun 1944</b></span><br><span class="nobr">Wydanie pudełkowe</span><br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2865" target="_blank">Forum Korsun 1944</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['ardeny1944'] = {
+    coords : [
+			new google.maps.LatLng(50.6800099, 4.3561299),
+			new google.maps.LatLng(49.79, 4.3561299),
+			new google.maps.LatLng(49.79, 6.499383),
+			new google.maps.LatLng(50.6800099, 6.499383)
+	],
+	color: '#FF0000',
+	func:  function ardeny1944(event) {
+				var contentString = '<span class="nobr"><b>Ardeny 1944</b></span><br><span class="nobr">Wydanie pudełkowe</span><br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1190" target="_blank">Forum Ardeny 1944</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['budziszyn1945'] = {
+    coords : [
+			new google.maps.LatLng(51.800000, 12.539517),
+			new google.maps.LatLng(50.969538, 12.539517),
+			new google.maps.LatLng(50.969538, 15.000000),
+			new google.maps.LatLng(51.800000, 15.000000)
+	],
+	color: '#FF0000',
+	func:  function budziszyn1945(event) {
+				var contentString = '<b>Budziszyn 1945</b><br>Wydanie pudełkowe<br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1337" target="_blank">Forum Budziszyn 1945</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['berlin1945'] = {
+    coords : [
+				new google.maps.LatLng(52.856505, 12.539517),
+				new google.maps.LatLng(51.800000, 12.539517),
+				new google.maps.LatLng(51.800000, 15.000000),
+				new google.maps.LatLng(52.859480, 15.000000)
+	],
+	color: '#FF0000',
+	func:  function berlin1945(event) {
+				var contentString = '<b>Berlin 1945</b><br><span class="nobr">Wydanie pudełkowe (kwiecień 2015 ?)<br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3603" target="_blank">Forum Berlin 1945</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+//--------------------------------------------------------------------------------
 // Gry w systemie WB-95 z TiSów.
 wb95Maps['tula1941'] = {
     coords : [
@@ -95,5 +170,75 @@ wb95Maps['lukdonu1943'] = {
 	func:  function lukdonu1943(event) {
 				var contentString = '<b>Łuk Donu 1943</b><br><span class="nobr">TiS 13</span><br>' +
 				'<a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=679" target="_blank">Forum Łuk Donu 1943</a>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['bagration1944'] = {
+    coords : [
+		new google.maps.LatLng(52.348133, 20.511809),
+		new google.maps.LatLng(51.243119, 21.792283),
+		new google.maps.LatLng(51.786645, 22.981553),
+		new google.maps.LatLng(52.863436, 21.741472)
+	],
+	color: '#FF0000',
+	func:  function bagration1944(event) {
+				var contentString = '<b>Bagration 1944</b><br>TiS 25, TiS 26<br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=288" target="_blank">Forum Bagration 1944</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['holandia1944'] = {
+    coords : [
+		new google.maps.LatLng(51.573092, 4.3561299),
+		new google.maps.LatLng(50.6800099, 4.3561299),
+		new google.maps.LatLng(50.6800099, 6.499383),
+		new google.maps.LatLng(51.573092, 6.499383)
+	],
+	color: '#FF0000',
+	func:  function holandia1944(event) {
+				var contentString = '<span class="nobr"><b>Holandia 1944</b></span><br><span class="nobr">TiS 17 + TiS 18</span><br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=1659" target="_blank">Forum Holandia 1944</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['wroclaw1945'] = {
+    coords : [
+			new google.maps.LatLng(51.279807, 16.100255),
+			new google.maps.LatLng(50.465365, 16.100255),
+			new google.maps.LatLng(50.465365, 18.020212),
+			new google.maps.LatLng(51.279807, 18.020212)
+	],
+	color: '#FF0000',
+	func:  function wroclaw1945(event) {
+				var contentString = '<span class="nobr"><b>Wroclaw 1945</b></span><br><span class="nobr">TiS 23</span><br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2419" target="_blank">Forum Wrocław 1945</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['colmar1945'] = {
+    coords : [
+			new google.maps.LatLng(48.546530, 6.624716),
+			new google.maps.LatLng(47.858830, 6.624716),
+			new google.maps.LatLng(47.858830, 8.227338),
+			new google.maps.LatLng(48.546530, 8.227338)
+	],
+	color: '#FF0000',
+	func:  function colmar1945(event) {
+				var contentString = '<b>Colmar 1945</b><br><span class="nobr">TiS 28</span><br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2930" target="_blank">Forum TiS 28</a></span>';
+				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
+};
+
+wb95Maps['nordwind1945'] = {
+    coords : [
+			new google.maps.LatLng(49.257848, 6.624716),
+			new google.maps.LatLng(48.546530, 6.624716),
+			new google.maps.LatLng(48.546530, 8.227338),
+			new google.maps.LatLng(49.257848, 8.227338)
+	],
+	color: '#FF0000',
+	func:  function nordwind1945(event) {
+				var contentString = '<span class="nobr"><b>Nordwind 1945</b></span><br><span class="nobr">TiS 21</span><br>' +
+				'<span class="nobr"><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2172" target="_blank">Forum TiS 21</a></span>';
 				infoWindow.setContent(contentString); infoWindow.setPosition(event.latLng); infoWindow.open(map); },
 };
