@@ -36,6 +36,7 @@ napoleonMaps['albuera1811'] = {
   h: 0.10,
   lat: 38.713562,
   lng:  -6.827753, 
+  func: function albuera1811(event) {	infoWindow.setContent(
 		'<b>Albuera 1811</b><br><span class="nobr">TiS 26</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2786" target="_blank">Forum Albuera 1811</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
 };
 
@@ -47,4 +48,3 @@ napoleonMaps['gettysburg1863'] = {
   func: function gettysburg1863(event) {	infoWindow.setContent(
 		'<b>Gettysburg 1863</b><br><span class="nobr">TiS 28</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2786" target="_blank">Forum Gettysburg 1863</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
 };
-
