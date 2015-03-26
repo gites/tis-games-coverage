@@ -124,8 +124,8 @@ napoleonMaps['dubienka1792'] = {
 napoleonMaps['maciejowice1794'] = {
   w: 0.20,
   h: 0.10,
-  lat: 51.693251,
-  lng: 21.540041,
+  lat: 51.603251,
+  lng: 21.500041,
   func: function maciejowice1794(event) {	infoWindow.setContent(
 		'<b>Maciejowice 1794</b><br><span class="nobr">TiS 38</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=4111" target="_blank">Forum Maciejowice 1794</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
 };
