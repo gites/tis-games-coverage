@@ -10,6 +10,8 @@
 		'<b>TiS HQ</b><br><span class="nobr">Centrum dowodzenia wszechświatem.</span><br><a href="http://taktykaistrategia.pl/" target="_blank">Strona TiS</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
 };
 */
+
+
 medievalMaps['grunwald1410'] = {
   radius: 12345,
   center: new google.maps.LatLng(53.531810, 20.103500),

@@ -15,6 +15,8 @@ span.nobr { white-space: nowrap; }
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <!-- js/medieval.js - współrzędne dla systemu Średniowiecze -->
 <script src="js/medieval.js"  charset="UTF-8"></script>
+<!-- js/napoleon.js - współrzędne dla systemu napoleon -->
+<script src="js/napoleon.js"  charset="UTF-8"></script>
 <!-- js/wb-95.js - współrzędne dla systemu WB-95 -->
 <script src="js/wb-95.js"  charset="UTF-8"></script>
 <script>
@@ -44,8 +46,8 @@ map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     var mapsPolygon = new google.maps.Polygon(wb95MapView);
 	google.maps.event.addListener(mapsPolygon, 'click', wb95Maps[game].func);
 };
-//drawing maps for medieval
 
+//drawing maps for medieval
 for (var game in medievalMaps) {
     var medievalMapView = {
       strokeColor: '#0000FF',  strokeOpacity: 0.8,  strokeWeight: 2,  fillColor: '#0000FF', fillOpacity: 0.35,  map: map,  center: medievalMaps[game].center, radius: medievalMaps[game].radius
@@ -53,10 +55,27 @@ for (var game in medievalMaps) {
     mapsCircle = new google.maps.Circle(medievalMapView);
 	google.maps.event.addListener(mapsCircle, 'click', medievalMaps[game].func);
 };
-
+//napoleonMaps napoleonlMapView 
 //drawing maps for Napoleon
-//TODO :)
- 
+for (var game in napoleonMaps) {
+	var x1 = napoleonMaps[game].lat+napoleonMaps[game].h;
+	var y1 = napoleonMaps[game].lng-napoleonMaps[game].w;
+	var x2 = napoleonMaps[game].lat-napoleonMaps[game].h;
+	var y2 = napoleonMaps[game].lng+napoleonMaps[game].w;
+	
+    var napoleonMapView = {
+      strokeColor: '#00FF00',  strokeOpacity: 0.8,  strokeWeight: 2,  fillColor: '#00FF00', fillOpacity: 0.35,  map: map,
+	  bounds: new google.maps.LatLngBounds(
+		  new google.maps.LatLng(x1, y1), 
+		  new google.maps.LatLng(x2, y2)
+	  )
+	  };
+    mapsRectangle = new google.maps.Rectangle(napoleonMapView);
+	google.maps.event.addListener(mapsRectangle, 'click', napoleonMaps[game].func);
+};
+
+//		  new google.maps.LatLng(55.687942, 35.075171), 
+//		  new google.maps.LatLng(55.395786, 35.459692)
 /* Wersja z ikonką zamiast koła
 for (var game in medievalMaps2) {
     var smalMapMarker = {
