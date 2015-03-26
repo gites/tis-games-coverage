@@ -55,7 +55,7 @@ for (var game in medievalMaps) {
     mapsCircle = new google.maps.Circle(medievalMapView);
 	google.maps.event.addListener(mapsCircle, 'click', medievalMaps[game].func);
 };
-//napoleonMaps napoleonlMapView 
+
 //drawing maps for Napoleon
 for (var game in napoleonMaps) {
 	var x1 = napoleonMaps[game].lat+napoleonMaps[game].h;
@@ -74,8 +74,6 @@ for (var game in napoleonMaps) {
 	google.maps.event.addListener(mapsRectangle, 'click', napoleonMaps[game].func);
 };
 
-//		  new google.maps.LatLng(55.687942, 35.075171), 
-//		  new google.maps.LatLng(55.395786, 35.459692)
 /* Wersja z ikonką zamiast koła
 for (var game in medievalMaps2) {
     var smalMapMarker = {
@@ -108,10 +106,13 @@ font.wb95 {
 font.sredniowiecze {
 	color: #0000FF;
 }
+font.napoleon{
+	color: #00FF00;
+}
 </style>
 </head>
 <body>
-<div class="legend">Gry wydane przez TiS. Legenda: <font class="wb95">Czerwone prostokąty: WB-95 </font><font class="sredniowiecze"> Niebieskie okręgi: Średniowiecze</font></div>
+<div class="legend">Gry wydane przez TiS. Legenda: <font class="wb95">Czerwone prostokąty: WB-95 </font><font class="sredniowiecze"> Niebieskie okręgi: Średniowiecze</font><font class="napoleon"> Zielone kwadraty: Napoleon</font></div>
 <div id="map-canvas"></div>
 </body>
 </html>

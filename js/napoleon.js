@@ -48,3 +48,93 @@ napoleonMaps['gettysburg1863'] = {
   func: function gettysburg1863(event) {	infoWindow.setContent(
 		'<b>Gettysburg 1863</b><br><span class="nobr">TiS 28</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=2786" target="_blank">Forum Gettysburg 1863</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
 };
+
+napoleonMaps['marengo1800'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 45.256558, 
+  lng: 10.735312,
+  func: function marengo1800(event) {	infoWindow.setContent(
+		'<b>Marengo 1800</b><br><span class="nobr">TiS 29</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3077" target="_blank">Forum Marengo 1800</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['montebello1800'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 44.998888, 
+  lng: 9.102743,
+  func: function montebello1800(event) {	infoWindow.setContent(
+		'<b>Montebello 1800, 1859</b><br><span class="nobr">TiS 30</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3190" target="_blank">Forum Montebello 1800, 1859</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['smolensk1812'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 54.785876, 
+  lng: 32.021247,
+  func: function smolensk1812(event) {	infoWindow.setContent(
+		'<b>Smoleńsk 1812</b><br><span class="nobr">TiS 32</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3341" target="_blank">Forum Smoleńsk 1812</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['boreml1812'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 50.476289, 
+  lng: 25.182876,
+  func: function boreml1812(event) {	infoWindow.setContent(
+		'<b>Boreml 1812</b><br><span class="nobr">TiS 33</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3359" target="_blank">Forum Boreml 1812</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['brandy1863'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 38.501808, 
+  lng: -77.893563,
+  func: function brandy1863(event) {	infoWindow.setContent(
+		'<b>Brandy Station 1863</b><br><span class="nobr">TiS 33</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3358" target="_blank">Forum Brandy Station 1863</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['bullrun1861'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 38.767130,
+  lng: -77.504538,
+  func: function bullrun1861(event) {	infoWindow.setContent(
+		'<b>Bull Run/Manassas 1861</b><br><span class="nobr">TiS 35</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=3518" target="_blank">Forum Bull Run/Manassas 1861</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['zielence1792'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 49.886549, 
+  lng: 27.127289,
+  func: function zielence1792(event) {	infoWindow.setContent(
+		'<b>Zieleńce 1792</b><br><span class="nobr">TiS 37</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=4048" target="_blank">Forum Zieleńce 1792</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['dubienka1792'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 51.048705,
+  lng: 23.892498,
+  func: function dubienka1792(event) {	infoWindow.setContent(
+		'<b>Dubienka 1792</b><br><span class="nobr">TiS 37</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=4048" target="_blank">Forum Dubienka 1792</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['maciejowice1794'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 51.693251,
+  lng: 21.540041,
+  func: function maciejowice1794(event) {	infoWindow.setContent(
+		'<b>Maciejowice 1794</b><br><span class="nobr">TiS 38</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=4111" target="_blank">Forum Maciejowice 1794</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
+
+napoleonMaps['raclawice1794'] = {
+  w: 0.20,
+  h: 0.10,
+  lat: 50.325763, 
+  lng: 20.237049,
+  func: function raclawice1794(event) {	infoWindow.setContent(
+		'<b>Racławice 1794</b><br><span class="nobr">TiS 38</span><br><a href="http://taktykaistrategia.pl/forum/viewtopic.php?t=4111" target="_blank">Forum Racławice 1794</a>'); infoWindow.setPosition(event.latLng); infoWindow.open(map);},
+};
